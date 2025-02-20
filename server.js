@@ -79,5 +79,6 @@ server.delete('/videos/:id', async (request, reply) => {
 /*Criando a porta do servidor, no fastify passamos um objeto com a propriedade da port com o valor da porta
 Como vamos hospedar nosso serviço estamos usando a port do web service, mas caso não encontre vai usar a 3333*/
 server.listen({
+    host: "0.0.0.0", //Para o render
     port: process.env.PORT ?? 3333,
 });
